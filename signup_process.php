@@ -1,8 +1,8 @@
 <?php
-$conn = mysqli_connect('localhost','123456','123456','boardINFO');
+$conn = mysqli_connect('localhost','root','123456','userINFO');
 
-$userID = $_POST['uname'];
-$userPW = $_POST['upass'];
+$userID = $_POST['userID'];
+$userPW = $_POST['userPW'];
 
 $sql = "insert into user(userID, userPW) VALUES('{$userID},'{$userPW}')";
 
