@@ -1,2 +1,2 @@
 # JK-HB
-pure PHP board project
+vanila PHP board project
