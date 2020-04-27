@@ -20,8 +20,7 @@ if(mysqli_num_rows($result)==1) {
             ?>
             <script>
                 alert("로그인 되었습니다.");
-                // TODO 로그인 성공시 가는 페이지
-                location.replace("./index.php");
+                location.replace("view/main.php");
         </script>
 
 <?php

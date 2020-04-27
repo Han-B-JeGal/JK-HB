@@ -1,18 +1,43 @@
-<?php
-$conn = mysqli_connect('localhost','root','123456','userINFO');
+<!-- 
+ -->
+ <?php
+ 
+ $connect = mysqli_connect('localhost', 'root', '123456', 'boardINFO') or die("fail");
 
-$userID = $_POST['userID'];
-$userPW = $_POST['userPW'];
+ $userID = $_POST['userID'];
+ $userPW = $_POST['userPW'];
+ $checkPW = $_POST['checkPW'];
 
-$sql = "insert into user(userID, userPW) VALUES('{$userID},'{$userPW}')";
+ //입력받은 데이터를 DB에 저장
+ $query = "insert into userINFO (userID, userPW) values ('$userID', '$userPW')";
 
-    $result = mysqli_query($conn,$sql);
-    if($result == true)
-    {
-        echo '성공했습니다. <a href = "index.php">돌아가기</a>';
-    }
-    else {
-        echo '저장하는 과정에 문제가 생겼습니다.';
-        error_log(mysqli_error($conn));
-    }
+ if($userPW == $checkPW){
+
+     $result = $connect->query($query);
+
+ //저장이 됐다면 (result = true) 가입 완료
+ if($result) {
+ ?>      <script>
+         alert('가입 되었습니다.');
+         location.replace("./index.php");
+         </script>
+
+<?php   }
+ else{
+?>              <script>
+                 
+                 alert("FAIL");
+         </script>
+<?php   }
+ 
+ mysqli_close($connect);
+ }
+else{
+    ?>
+    <script>
+    alert("비밀번호 불일치");
+    history.back(-1); //-1값 넣으면 틀리기전으로 이동
+    </script>
+    <?php
+}
 ?>

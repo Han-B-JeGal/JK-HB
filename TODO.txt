@@ -1,0 +1,9 @@
+TODO 4/26-27 : make Main.page, make articleTable & make Table of article;
+
+Main.page needs logout function, Pagenation;
+
+articleTable needs column of Author(userID), Title, Content & etc;
+
+
+4/27-4/28 : gotta design a main page(detail) be like BLACK THEME or ANYTHING
+&&& make main2.php better

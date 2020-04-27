@@ -6,16 +6,19 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <form class="box" action="signup_process.php" method="POST">
+        <form class="box" method="POST" action="signup_process.php">
             <h1>Sign up</h1>
             <label for="userID" class="title"></label>
             <input type="text" name="userID" placeholder="ID">
             
             <label for="userPW" class="title"></label>
             <input type="password" name="userPW" placeholder="Password">
+
+            <label for="checkPW" class="title"></label>
+            <input type="password" name="checkPW" placeholder="Check password"> 
             
             <input type="submit" value="눌러서 회원가입">
-        
-        </form>
+   
+        </form> 
     </body>
 </html>
