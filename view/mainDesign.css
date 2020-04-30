@@ -43,3 +43,9 @@ table .even{
 a:link {color : #57A0EE; text-decoration:none;}
 a:hover { text-decoration : underline;}
 
+.box{
+    position: absolute;
+    margin-top:auto;
+    margin-bottom:auto;
+    
+}

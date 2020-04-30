@@ -37,7 +37,7 @@
                         <?php } ?>
                 <td width = "50" align = "center"><?php echo $total?></td>
                 <td width = "500" align = "center">
-                <a href = "view.php?number=<?php echo $rows['number']?>">
+                <a href = "viewArticle.php?number=<?php echo $rows['number']?>">
                 <?php echo $rows['title']?></td>
                   <td width = "100" align = "center"><?php echo $rows['id']?></td>
                 <td width = "200" align = "center"><?php echo $rows['date']?></td>
@@ -52,7 +52,7 @@
  
         <div class = text>
            <!-- TODO !-->
-        <font style="cursor: hand"onClick="location.href='./write.php'">글쓰기</font> 
+        <font style="cursor: hand"onClick="location.href='./writeArticle.php'">글쓰기</font> 
         </div> 
     </body>     
 </html>
