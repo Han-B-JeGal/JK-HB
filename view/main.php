@@ -6,6 +6,17 @@
         <link rel="stylesheet" href="./mainDesign.css">
     </head>
     <?php
+        session_start();    //session 가져오기
+ 
+        //session에 데이터가 없다면 로그인 화면으로 GO
+        if (!isset($_SESSION['userID'])) {
+                 header('Location : http://127.0.0.1:80/index.php');
+        }
+        ?>
+
+
+
+    <?php
                 $connect = mysqli_connect('localhost', 'root', '123456', 'boardINFO') or die ("connect fail");
                 $query ="select * from article order by number desc";
                 $result = $connect->query($query);
